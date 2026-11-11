@@ -1,130 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lab Enacción | Repositorio de informes</title>
+  <title>Lab Enacción | Repositorio de informes</title>
 
-<meta name="description"
-content="Repositorio académico de informes, proyectos y documentos de Lab Enacción.">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #F7FAFD;
+      color: #092B52;
+    }
 
-<style>
+    .container {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+      padding: 80px 0;
+    }
 
-:root{
-  --azul-oscuro:#092B52;
-  --azul:#0D5493;
-  --azul-medio:#2878B5;
-  --azul-claro:#EAF3FB;
-  --amarillo:#FFD43B;
-  --blanco:#FFFFFF;
-  --fondo:#F7FAFD;
-  --gris:#65758B;
-  --borde:#DDE7F0;
-}
+    .tag {
+      display: inline-block;
+      padding: 10px 18px;
+      background: #FFD43B;
+      border-radius: 30px;
+      font-weight: bold;
+    }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+    h1 {
+      font-size: 64px;
+      margin: 25px 0 10px;
+    }
 
-body{
-  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:var(--fondo);
-  color:var(--azul-oscuro);
-  min-height:100vh;
-}
+    p {
+      color: #65758B;
+      font-size: 20px;
+    }
 
-/* Fondo inspirado en cognición corporizada */
+    .test {
+      margin-top: 40px;
+      padding: 25px;
+      background: #092B52;
+      color: white;
+      border-radius: 20px;
+    }
+  </style>
+</head>
 
-.background{
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  overflow:hidden;
-  z-index:-1;
-}
+<body>
 
-.node{
-  position:absolute;
-  border-radius:50%;
-  opacity:.15;
-  animation:float 9s ease-in-out infinite;
-}
+  <main class="container">
 
-.node.blue{
-  background:var(--azul);
-  width:220px;
-  height:220px;
-  top:8%;
-  right:-80px;
-}
+    <div class="tag">
+      Cognición situada · conocimiento en contexto
+    </div>
 
-.node.yellow{
-  background:var(--amarillo);
-  width:180px;
-  height:180px;
-  left:-70px;
-  top:45%;
-  animation-delay:-3s;
-}
+    <h1>Lab Enacción</h1>
 
-.node.small{
-  background:var(--azul-medio);
-  width:80px;
-  height:80px;
-  bottom:12%;
-  right:12%;
-  animation-delay:-5s;
-}
+    <p>
+      Repositorio académico de informes y documentos.
+    </p>
 
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-20px)}
-}
+    <div class="test">
+      ✓ La interfaz de Lab Enacción está funcionando correctamente.
+    </div>
 
-.container{
-  width:min(1180px,91%);
-  margin:auto;
-}
+  </main>
 
-/* HERO */
+</body>
 
-header{
-  padding:70px 0 42px;
-}
-
-.label{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  background:var(--amarillo);
-  padding:9px 16px;
-  border-radius:30px;
-  font-size:.85rem;
-  font-weight:700;
-  margin-bottom:22px;
-}
-
-h1{
-  font-size:clamp(3rem,7vw,5.7rem);
-  letter-spacing:-4px;
-  line-height:.95;
-}
-
-.subtitle{
-  margin-top:20px;
-  font-size:1.25rem;
-  line-height:1.6;
-  color:var(--gris);
-  max-width:720px;
-}
-
-.author{
-  margin-top:11px;
-  color:var(--azul);
-  font-weight:650;
-}
-
-/* Conexió
+</html>
