@@ -2,72 +2,299 @@
 <html lang="es">
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Lab Enacción | Repositorio de informes</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #F7FAFD;
-      color: #092B52;
-    }
+  <title>
+    Lab Enacción | Repositorio de informes
+  </title>
 
-    .container {
-      width: min(1100px, 90%);
-      margin: 0 auto;
-      padding: 80px 0;
-    }
+  <meta
+    name="description"
+    content="Repositorio académico de informes y documentos de Lab Enacción."
+  >
 
-    .tag {
-      display: inline-block;
-      padding: 10px 18px;
-      background: #FFD43B;
-      border-radius: 30px;
-      font-weight: bold;
-    }
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
 
-    h1 {
-      font-size: 64px;
-      margin: 25px 0 10px;
-    }
-
-    p {
-      color: #65758B;
-      font-size: 20px;
-    }
-
-    .test {
-      margin-top: 40px;
-      padding: 25px;
-      background: #092B52;
-      color: white;
-      border-radius: 20px;
-    }
-  </style>
 </head>
+
 
 <body>
 
-  <main class="container">
 
-    <div class="tag">
-      Cognición situada · conocimiento en contexto
+  <!-- FONDO -->
+
+  <div class="background">
+    <div class="node node-blue"></div>
+    <div class="node node-yellow"></div>
+    <div class="node node-small"></div>
+  </div>
+
+
+  <!-- ENCABEZADO -->
+
+  <header class="hero">
+
+    <div class="container">
+
+      <div class="tag">
+        ● Cognición situada · conocimiento en contexto
+      </div>
+
+      <h1>Lab Enacción</h1>
+
+      <p class="subtitle">
+        Repositorio académico para organizar,
+        consultar y circular informes, proyectos
+        y documentos asociados con investigación,
+        formación y gestión académica.
+      </p>
+
+      <p class="author">
+        Juan Carlos Valderrama Cárdenas
+      </p>
+
+
+      <!-- RELACIÓN ENACTIVA -->
+
+      <div class="enaction">
+
+        <span class="enaction-item">
+          Persona
+        </span>
+
+        <span class="enaction-arrow">
+          ↔
+        </span>
+
+        <span class="enaction-item">
+          Cuerpo
+        </span>
+
+        <span class="enaction-arrow">
+          ↔
+        </span>
+
+        <span class="enaction-item">
+          Cognición
+        </span>
+
+        <span class="enaction-arrow">
+          ↔
+        </span>
+
+        <span class="enaction-item">
+          Acción
+        </span>
+
+        <span class="enaction-arrow">
+          ↔
+        </span>
+
+        <span class="enaction-item">
+          Entorno
+        </span>
+
+      </div>
+
     </div>
 
-    <h1>Lab Enacción</h1>
+  </header>
 
-    <p>
-      Repositorio académico de informes y documentos.
-    </p>
 
-    <div class="test">
-      ✓ La interfaz de Lab Enacción está funcionando correctamente.
+  <!-- CONTENIDO -->
+
+  <main class="container">
+
+
+    <!-- BÚSQUEDA -->
+
+    <section class="search-panel">
+
+      <input
+        id="busqueda"
+        class="search-field"
+        type="search"
+        placeholder="Buscar informes, conceptos o palabras clave..."
+        aria-label="Buscar documentos"
+      >
+
+
+      <select
+        id="filtro-anio"
+        class="filter-field"
+        aria-label="Filtrar por año"
+      >
+
+        <option value="">
+          Todos los años
+        </option>
+
+      </select>
+
+
+      <select
+        id="filtro-categoria"
+        class="filter-field"
+        aria-label="Filtrar por categoría"
+      >
+
+        <option value="">
+          Todas las categorías
+        </option>
+
+        <option value="Proyectos de investigación">
+          Proyectos de investigación
+        </option>
+
+        <option value="Semillero de investigación">
+          Semillero de investigación
+        </option>
+
+        <option value="SaberPro">
+          SaberPro
+        </option>
+
+        <option value="Internacionalización">
+          Internacionalización
+        </option>
+
+      </select>
+
+    </section>
+
+
+    <!-- CATÁLOGO -->
+
+    <div class="content-layout">
+
+
+      <!-- DOCUMENTOS -->
+
+      <section>
+
+        <div class="results-header">
+
+          <h2>
+            Documentos
+          </h2>
+
+          <span
+            id="contador"
+            class="counter"
+          >
+            0 documentos
+          </span>
+
+        </div>
+
+
+        <div
+          id="documentos"
+          class="document-list"
+        >
+
+          <div class="empty-state">
+
+            <div class="empty-icon">
+              ···
+            </div>
+
+            <h3>
+              Cargando catálogo
+            </h3>
+
+            <p>
+              Lab Enacción está consultando
+              los documentos disponibles.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- COLUMNA LATERAL -->
+
+      <aside class="sidebar">
+
+
+        <section class="info-box">
+
+          <div class="info-icon">
+            ◎
+          </div>
+
+          <h3>
+            Archivo vivo
+          </h3>
+
+          <p>
+            Lab Enacción organiza documentos
+            académicos para favorecer su consulta,
+            circulación y conexión con los contextos
+            en los que fueron producidos.
+          </p>
+
+        </section>
+
+
+        <section class="cloud-box">
+
+          <h3>
+            Conceptos del repositorio
+          </h3>
+
+          <p class="cloud-description">
+            Los términos adquieren mayor tamaño
+            según su frecuencia dentro de los
+            documentos indexados.
+          </p>
+
+          <div
+            id="nube-palabras"
+            class="word-cloud"
+          >
+          </div>
+
+        </section>
+
+
+      </aside>
+
     </div>
 
   </main>
+
+
+  <!-- PIE DE PÁGINA -->
+
+  <footer>
+
+    <div class="container">
+
+      Lab Enacción · Repositorio académico ·
+      Juan Carlos Valderrama Cárdenas
+
+    </div>
+
+  </footer>
+
+
+  <!-- MOTOR DEL CATÁLOGO -->
+
+  <script src="app.js"></script>
+
 
 </body>
 
