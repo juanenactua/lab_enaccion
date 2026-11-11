@@ -17,7 +17,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+
   deploy:
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -25,16 +27,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Descargar repositorio
         uses: actions/checkout@v6
+
+      - name: Configurar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Generar catalogo de documentos
+        run: python scripts/generar_indice.py
+
+      - name: Mostrar catalogo generado
+        run: cat documentos.json
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Preparar archivos
+      - name: Preparar sitio para GitHub Pages
         uses: actions/upload-pages-artifact@v4
         with:
-          path: '.'
+          path: "."
 
       - name: Publicar sitio
         id: deployment
